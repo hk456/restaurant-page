@@ -12,8 +12,6 @@
 
 export default function loadHome(){
     const container = Object.assign(document.createElement('div'), { id: 'home', className: 'container' });
-    const p = Object.assign(document.createElement('p'));
-    const h = Object.assign(document.createElement('h3'));
 
     const heading = Object.assign(document.createElement('div'), { className: 'heading', textContent: 'Welcome to Our Restaurant' });
 
@@ -24,8 +22,13 @@ export default function loadHome(){
     // Creating the sub-sections
     // About 
     const about = Object.assign(document.createElement('div'), { className: 'about' });
-    h.textContent = ''
-    about.append(p, h);
+    const p1 = Object.assign(document.createElement('p'), {
+        textContent: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a expedita vel aut voluptatum quod ducimus, voluptas ad culpa recusandae mollitia dolor ea dicta accusantium deserunt officiis tenetur necessitatibus quis?'
+    });
+    const h1 = Object.assign(document.createElement('h3'), {
+        textContent: 'Burger or smth'
+    });
+    about.append(p1, h1);
 
     // Hours
     const hours = Object.assign(document.createElement('div'), { className: 'hours' });
@@ -51,7 +54,14 @@ export default function loadHome(){
 
     // Contact
     const contact = Object.assign(document.createElement('div'), { className: 'contact' });
-    contact.append(h, p);
+    const p2 = Object.assign(document.createElement('p'), {
+        textContent: 'Hey! Pls contact us! like here - 483-343-3843-383'
+    });
+    const h2 = Object.assign(document.createElement('h3'), {
+        textContent: 'Hey! Pls Contact Us!'
+    });
+    contact.append(h2, p2);
+
 
     content.append(about, hours, contact);   
     

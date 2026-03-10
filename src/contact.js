@@ -24,5 +24,5 @@ export default function loadContact() {
 
     content.append(h,p);
     container.append(heading, content, content, content);
-    
+    return container; 
 }
